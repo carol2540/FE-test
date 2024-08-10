@@ -77,7 +77,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        header: "url('/public/images/header-image.png')",
+        header: "url('/public/images/image_header.png')",
       },
       fontFamily: {
         signature: ["var(--font-signature)"],
@@ -85,18 +85,20 @@ const config = {
         unbounded: ["var(--unbounded)"],
       },
       fontSize: {
-        22: "22px",
         18: "18px",
+        20: "20px",
+        22: "22px",
         24: "24px",
         28: "28px",
         32: "32px",
         36: "36px",
         54: "54px",
+        72: "72px",
         86: "86px",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
 } satisfies Config;
 
 export default config;
