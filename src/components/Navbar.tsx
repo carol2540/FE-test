@@ -85,10 +85,24 @@ const Navbar = () => {
                 <a className="text-myGreen text-20" href="/">
                   Customize your trip
                 </a>
-                <a className="text-myGreen text-20" href="#destinations">
+                <a
+                  className="text-myGreen text-20"
+                  href="#destinations"
+                  onClick={() => {
+                    setActiveSection("destinations");
+                    document.getElementById("destinations")?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Destination
                 </a>
-                <a className="text-myGreen text-20" href="#articles">
+                <a
+                  className="text-myGreen text-20"
+                  href="#articles"
+                  onClick={() => {
+                    setActiveSection("articles");
+                    document.getElementById("articles")?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Article
                 </a>
                 <Button
@@ -136,7 +150,10 @@ const Navbar = () => {
                 "font-semibold",
                 isScrolled ? "text-myWhite" : "text-myGreen"
               )}
-              onClick={() => setActiveSection("destinations")}
+              onClick={() => {
+                setActiveSection("destinations");
+                document.getElementById("destinations")?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Destination
             </Link>
@@ -148,7 +165,10 @@ const Navbar = () => {
                 "font-semibold",
                 isScrolled ? "text-myWhite" : "text-myGreen"
               )}
-              onClick={() => setActiveSection("articles")}
+              onClick={() => {
+                setActiveSection("articles");
+                document.getElementById("articles")?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Article
             </Link>
