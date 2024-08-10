@@ -59,17 +59,14 @@ const Destinations = async () => {
             className="overflow-x-scroll gap-3 mt-10 scrollbar-none lg:gap-5"
           >
             <SmallDestinationItem
-              key="premium-ubud"
               itinerary_name={"[PREMIUM TRIP] Best of Ubud 3D2N"}
               partner_name={"Pandooin"}
               itinerary_variant_pub_price={"5755000"}
               image={
                 "https://ik.imagekit.io/pandooin/tr:pr-true/production/images/itinerary/premium-trip-best-of-ubud-3d2n/iNQGVuffHarZ0jeiXq3uLsrgT2xdceymVtdebAo4.jpg"
               }
-              alt="Best of Ubud 3D2N"
             />
             <SmallDestinationItem
-              key="premium-labuan-bajo-1"
               itinerary_name={
                 "[PREMIUM TRIP] Labuan Bajo: Liveboard in VINCA VOYAGES Phinisi"
               }
@@ -78,10 +75,8 @@ const Destinations = async () => {
               image={
                 "https://ik.imagekit.io/pandooin/tr:pr-true/production/images/itinerary/premium-trip-labuan-bajo-liveboard-in-vinca-voyages-phinisi/S3TRAnYrcDnQOLgLxUEivqy4gI2Y2ebA18xXjCY4.jpg"
               }
-              alt="Labuan Bajo Liveboard"
             />
             <SmallDestinationItem
-              key="premium-thousand-island"
               itinerary_name={
                 "[PREMIUM TRIP] Thousand Island: Staycation in Private Island (Asha Resort)"
               }
@@ -90,10 +85,8 @@ const Destinations = async () => {
               image={
                 "https://ik.imagekit.io/pandooin/tr:pr-true/production/images/itinerary/premium-trip-staycation-in-asha-resort/93Orp8cZf9xftshaA5aRHk6ieB1eCpqnUHbIotet.jpg"
               }
-              alt="Thousand Island Staycation"
             />
             <SmallDestinationItem
-              key="premium-labuan-bajo-2"
               itinerary_name={
                 "[PREMIUM TRIP] Labuan Bajo: Liveboard in VINCA VOYAGES Phinisi"
               }
@@ -102,7 +95,6 @@ const Destinations = async () => {
               image={
                 "https://ik.imagekit.io/pandooin/tr:pr-true/production/images/itinerary/canyoneering-curug-cikondang-2d1n/UrVTwoOUK3Cw2zlQdhixck1TiZP5vT7NUEj2DKNi.jpg"
               }
-              alt="Labuan Bajo Liveboard"
             />
           </Div>
 

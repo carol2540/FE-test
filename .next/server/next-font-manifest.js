@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/carol/Documents/INTERNSHIP/FE-test/src/app/layout\":[\"static/media/29a6e977ce941007-s.p.woff2\",\"static/media/aa8d273d9caf0df4-s.p.woff2\",\"static/media/08434dc26d8c9e08-s.p.ttf\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
