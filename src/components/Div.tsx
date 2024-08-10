@@ -20,6 +20,9 @@ interface DivProps extends React.HTMLAttributes<HTMLDivElement> {
   itemsCenter?: boolean;
   wrap?: boolean;
   grow?: boolean;
+  grid?: boolean;
+  gridCols?: number;
+  Hfull?: boolean;
   children: React.ReactNode;
 }
 
@@ -42,6 +45,9 @@ const Div: React.FC<DivProps> = ({
   itemsCenter,
   wrap,
   grow,
+  grid,
+  gridCols,
+  Hfull,
   children,
   ...props
 }) => {
@@ -49,10 +55,13 @@ const Div: React.FC<DivProps> = ({
     <div
       className={cn(
         full && `w-full`,
+        Hfull && `h-full`,
         screen && `h-screen`,
         minH && `min-h-[${minH}]`,
         maxH && `min-h-[${maxH}]`,
         flex && `flex`,
+        grid && `grid`,
+        gridCols && `grid-cols-${gridCols}`,
         wrap && `flex-wrap`,
         grow && `grow`,
         column && `flex flex-col`,

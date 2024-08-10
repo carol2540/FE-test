@@ -29,9 +29,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --myGreen: hsl(180, 80%, 25%);
+    --myGreen: #0b7373;
     --myDarkGreen: #004040;
-    --myGold: hsl(40, 57%, 63%);
+    --myGold: #d6b66b;
     --myWhite: hsl(50, 19%, 97%);
   }
 
@@ -68,20 +68,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground bg-myWhite;
+    @apply text-foreground bg-myWhite;
   }
-  /* @font-face {
-    font-family: "Thesignature";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/public/font/Thesignature.otf) format("otf");
-  }
-  @font-face {
-    font-family: "unbounded";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(/public/font/Unbounded.ttf) format("ttf");
-  } */
 }

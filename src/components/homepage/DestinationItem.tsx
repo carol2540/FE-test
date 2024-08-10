@@ -1,32 +1,39 @@
 import React from "react";
 import Div from "../Div";
-import Image from "next/image";
 
-import dummy from "../../../public/images/header-image.svg";
-import { AspectRatio } from "../ui/aspect-ratio";
 import Button from "../Button";
-import { cn } from "@/lib/utils";
+import { cn, formatRupiah } from "@/lib/utils";
+import ImageSlider from "./ImageSlider";
+import { ItineraryGallery } from "@/lib/type";
 
-interface DestinationItemProps {
+export interface DestinationItemProps {
   direction?: "ltr" | "rtl";
+  itinerary_name: string;
+  description?: string;
+  partner_name: string;
+  image: ItineraryGallery[];
+  itinerary_variant_pub_price: string;
+  index?: number;
 }
 
-const DestinationItem = ({ direction = "ltr" }: DestinationItemProps) => {
+const DestinationItem = ({
+  direction = "ltr",
+  itinerary_name,
+  description,
+  partner_name,
+  image,
+  itinerary_variant_pub_price,
+}: DestinationItemProps) => {
   return (
     <Div full column className="gap-3 md:flex-row md:items-center lg:gap-8">
       <Div
         full
         className={cn(
-          "basis-1/2",
+          "basis-1/2 overflow-hidden",
           direction == "ltr" ? "md:order-1" : "md:order-2"
         )}
       >
-        <Image
-          src={dummy}
-          width={400}
-          alt="img"
-          className="object-cover object-center w-full h-full aspect-video rounded-sm md:h-64 lg:h-96"
-        />
+        <ImageSlider data={image} />
       </Div>
 
       <Div
@@ -37,18 +44,15 @@ const DestinationItem = ({ direction = "ltr" }: DestinationItemProps) => {
       >
         <Div column full className="text-myGreen">
           <p className="text-sm uppercase lg:text-base">7 DAYS 6 NIGHTS</p>
-          <p className="font-bold font-unbounded line-clamp-2 lg:text-36">
-            Paradise Gateway: Labuan Bajo Two Lines Title Example
-          </p>
+          <h2 className="font-bold font-unbounded line-clamp-2 lg:text-36">
+            {itinerary_name}
+          </h2>
           <Div column>
-            <p className="text-myDarkGreen leading-4 mt-2 order-1 md:order-2 md:line-clamp-4">
-              Labuan Bajo is a tropical paradise nestled in the westernmost part
-              of Flores Island, Indonesia. With its stunning landscapes,
-              crystal-clear waters, and vibrant marine life, it's a gateway to
-              explore the mesmerizing Komodo National Park.
+            <p className="text-myDarkGreen leading-4 mt-2 order-1 md:order-2 line-clamp-4">
+              {description}
             </p>
             <p className="text-myDarkGreen font-bold text-sm mt-2 order-2 md:order-1">
-              Organized by Pandooin
+              Organized by {partner_name}
             </p>
           </Div>
         </Div>
@@ -56,11 +60,11 @@ const DestinationItem = ({ direction = "ltr" }: DestinationItemProps) => {
         <Div flex between className="mt-2 items-end lg:mt-4">
           <Div column>
             <p className="text-sm text-myDarkGreen lg:text-base">Start from</p>
-            <p className="font-bold font-unbounded text-gray-300 leading-3 max-md:hidden">
-              IDR 5,200,000
+            <p className="font-semibold font-unbounded line-through text-gray-300 leading-3 max-md:hidden md:text-sm">
+              {formatRupiah(+itinerary_variant_pub_price + 1000000)}
             </p>
-            <p className="text-18 font-bold font-unbounded text-myDarkGreen lg:text-28">
-              IDR 5,200,000
+            <p className="text-18 font-semibold font-unbounded text-myDarkGreen lg:text-28">
+              {formatRupiah(+itinerary_variant_pub_price)}
             </p>
           </Div>
 

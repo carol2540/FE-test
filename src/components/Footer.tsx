@@ -11,9 +11,18 @@ const Footer = () => {
           <p className="text-sm">© 2023 Zamrood by PT Teknologi Pandu Wisata</p>
         </Div>
         <Div flex center className="gap-3">
-          <Icon icon={"ic:baseline-facebook"} className="text-2xl " />
-          <Icon icon={"mdi:instagram"} className="text-2xl " />
-          <Icon icon={"ic:baseline-email"} className="text-2xl " />
+          <Icon
+            icon={"ic:baseline-facebook"}
+            className="text-2xl hover:text-myGold transition-all cursor-pointer "
+          />
+          <Icon
+            icon={"mdi:instagram"}
+            className="text-2xl hover:text-myGold transition-all cursor-pointer "
+          />
+          <Icon
+            icon={"ic:baseline-email"}
+            className="text-2xl hover:text-myGold transition-all cursor-pointer "
+          />
         </Div>
       </Wrapper>
     </footer>
