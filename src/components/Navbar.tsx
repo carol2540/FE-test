@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,15 @@ const Navbar = () => {
       if (isTop !== isScrolled) {
         setIsScrolled(isTop);
       }
+
+      // Check which section is currently in view
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight) {
+          setActiveSection(section.id);
+        }
+      });
     };
 
     document.addEventListener("scroll", handleScroll);
@@ -30,6 +40,10 @@ const Navbar = () => {
       document.removeEventListener("scroll", handleScroll);
     };
   }, [isScrolled]);
+
+  const handleLogoClick = () => {
+    setActiveSection(""); // Reset active section when logo is clicked
+  };
 
   return (
     <nav
@@ -40,7 +54,7 @@ const Navbar = () => {
     >
       <Wrapper className="flex justify-between items-center p-4 md:px-8 lg:px-0 lg:py-5">
         <Div>
-          <Link href={"/"}>
+          <Link href={"/"} onClick={handleLogoClick}>
             <Image src={isScrolled ? logowhite : logo} width={134} alt="logo" />
           </Link>
         </Div>
@@ -71,10 +85,10 @@ const Navbar = () => {
                 <a className="text-myGreen text-20" href="/">
                   Customize your trip
                 </a>
-                <a className="text-myGreen text-20" href="/">
+                <a className="text-myGreen text-20" href="#destinations">
                   Destination
                 </a>
-                <a className="text-myGreen text-20" href="/">
+                <a className="text-myGreen text-20" href="#articles">
                   Article
                 </a>
                 <Button
@@ -117,22 +131,24 @@ const Navbar = () => {
           </Div>
           <Div>
             <Link
-              href={"/"}
+              href="#destinations"
               className={cn(
                 "font-semibold",
                 isScrolled ? "text-myWhite" : "text-myGreen"
               )}
+              onClick={() => setActiveSection("destinations")}
             >
               Destination
             </Link>
           </Div>
           <Div>
             <Link
-              href={"/"}
+              href="#articles"
               className={cn(
                 "font-semibold",
                 isScrolled ? "text-myWhite" : "text-myGreen"
               )}
+              onClick={() => setActiveSection("articles")}
             >
               Article
             </Link>
