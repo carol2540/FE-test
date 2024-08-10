@@ -30,7 +30,7 @@ const beyondList = [
 
 const BeyondPremium = () => {
   return (
-    <section className="w-full py-16 bg-myWhite">
+    <section id="customize" className="w-full py-16 bg-myWhite">
       <Wrapper className="w-full flex flex-col items-center px-3 lg:gap-6 lg:px-0">
         <Div column itemsCenter relative>
           <h1 className="text-54 font-signature text-myGreen lg:text-86">

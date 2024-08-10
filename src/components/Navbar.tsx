@@ -82,7 +82,14 @@ const Navbar = () => {
                 <a className="text-myGreen text-20" href="/">
                   Homepage
                 </a>
-                <a className="text-myGreen text-20" href="/">
+                <a
+                  className="text-myGreen text-20"
+                  href="#customize"
+                  onClick={() => {
+                    setActiveSection("customize");
+                    document.getElementById("customize")?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Customize your trip
                 </a>
                 <a
@@ -134,11 +141,15 @@ const Navbar = () => {
           </Div>
           <Div>
             <Link
-              href={"/"}
+              href="#customize"
               className={cn(
                 "font-semibold",
                 isScrolled ? "text-myWhite" : "text-myGreen"
               )}
+              onClick={() => {
+                setActiveSection("customize");
+                document.getElementById("customize")?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Customize Your Trip
             </Link>

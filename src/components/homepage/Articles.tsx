@@ -1,10 +1,30 @@
 import React from "react";
 import Wrapper from "../Wrapper";
 import Div from "../Div";
-import ArticleItem from "./ArticleItem";
+import Article_Item from "./ArticleItem";
 import { getArticle } from "@/lib/HTTPConnect";
 
 const listArticle = [
+  {
+    title: "7 Best Places to Dive in Indonesia: From Bali to Wakatobi",
+    image: "/images/header-image.svg",
+  },
+  {
+    title: "7 Best Places to Dive in Indonesia: From Bali to Wakatobi",
+    image: "/images/header-image.svg",
+  },
+  {
+    title: "7 Best Places to Dive in Indonesia: From Bali to Wakatobi",
+    image: "/images/header-image.svg",
+  },
+  {
+    title: "7 Best Places to Dive in Indonesia: From Bali to Wakatobi",
+    image: "/images/header-image.svg",
+  },
+  {
+    title: "7 Best Places to Dive in Indonesia: From Bali to Wakatobi",
+    image: "/images/header-image.svg",
+  },
 ];
 
 const Articles = async () => {
@@ -31,7 +51,7 @@ const Articles = async () => {
 
         <Div full column className="gap-4 md:hidden">
           {article?.map((article: any, index: React.Key | null | undefined) => (
-            <ArticleItem
+            <Article_Item
               key={index}
               title={article.title}
               image={article.featured_image}
@@ -48,7 +68,7 @@ const Articles = async () => {
           {article
             .slice(0, 4)
             .map((article: any, index: React.Key | null | undefined) => (
-              <ArticleItem
+              <Article_Item
                 key={index}
                 title={article.title}
                 image={article.featured_image}
@@ -59,7 +79,7 @@ const Articles = async () => {
 
         <Div full column className="gap-4 grid grid-cols-2 max-lg:hidden">
           <Div>
-            <ArticleItem
+            <Article_Item
               noRatio
               className="w-full h-full"
               title={article[0].title}
@@ -71,7 +91,7 @@ const Articles = async () => {
             {article
               .slice(1, 5)
               .map((article: any, index: React.Key | null | undefined) => (
-                <ArticleItem
+                <Article_Item
                   key={index}
                   title={article.title}
                   image={article.featured_image}

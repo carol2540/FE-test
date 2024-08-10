@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { formatRupiah } from "@/lib/utils";
 
-const SmallDestinationItem = ({
+const SmallDestination_Item = ({
   itinerary_name,
   partner_name,
   image,
@@ -66,4 +66,4 @@ const SmallDestinationItem = ({
   );
 };
 
-export default SmallDestinationItem;
+export default SmallDestination_Item;

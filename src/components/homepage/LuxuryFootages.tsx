@@ -5,9 +5,9 @@ import Image from "next/image";
 
 import dummy from "../../../public/images/header-image.svg";
 import { AspectRatio } from "../ui/aspect-ratio";
-import Separator from "./Separator";
+import Divider from "./Divider";
 import { getDatas } from "@/lib/HTTPConnect";
-import ImageSlider from "./ImageSlider";
+import SlidingImage from "./SlidingImage";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 const LuxuryFootages = async () => {
@@ -30,7 +30,7 @@ const LuxuryFootages = async () => {
         <Div>
           <Div className="md:hidden overflow-hidden">
             <AspectRatio ratio={1 / 1}>
-              <ImageSlider data={data.data[1].related_galleries} square />
+              <SlidingImage data={data.data[1].related_galleries} square />
             </AspectRatio>
           </Div>
 
@@ -58,7 +58,7 @@ const LuxuryFootages = async () => {
 
                   {idx == 1 && (
                     <Div full>
-                      <Separator color="white" className="mb-0 lg:mb-0" />
+                      <Divider color="white" className="mb-0 lg:mb-0" />
                     </Div>
                   )}
 

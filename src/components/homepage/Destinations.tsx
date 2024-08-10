@@ -60,41 +60,33 @@ const Destinations = async () => {
           >
             <SmallDestinationItem
               itinerary_name={"[PREMIUM TRIP] Best of Ubud 3D2N"}
-              partner_name={"Pandooin"}
+              partner_name={"pandooin"}
               itinerary_variant_pub_price={"5755000"}
-              image={
-                "https://ik.imagekit.io/pandooin/tr:pr-true/production/images/itinerary/premium-trip-best-of-ubud-3d2n/iNQGVuffHarZ0jeiXq3uLsrgT2xdceymVtdebAo4.jpg"
-              }
+              image={"/images/PoolBali.jpeg"}
             />
             <SmallDestinationItem
               itinerary_name={
                 "[PREMIUM TRIP] Labuan Bajo: Liveboard in VINCA VOYAGES Phinisi"
               }
-              partner_name={"Pandooin"}
+              partner_name={"pandooin"}
               itinerary_variant_pub_price={"7500000"}
-              image={
-                "https://ik.imagekit.io/pandooin/tr:pr-true/production/images/itinerary/premium-trip-labuan-bajo-liveboard-in-vinca-voyages-phinisi/S3TRAnYrcDnQOLgLxUEivqy4gI2Y2ebA18xXjCY4.jpg"
-              }
+              image={"/images/boatView.jpeg"}
             />
             <SmallDestinationItem
               itinerary_name={
                 "[PREMIUM TRIP] Thousand Island: Staycation in Private Island (Asha Resort)"
               }
-              partner_name={"Pandooin"}
+              partner_name={"pandooin"}
               itinerary_variant_pub_price={"1900000"}
-              image={
-                "https://ik.imagekit.io/pandooin/tr:pr-true/production/images/itinerary/premium-trip-staycation-in-asha-resort/93Orp8cZf9xftshaA5aRHk6ieB1eCpqnUHbIotet.jpg"
-              }
+              image={"/images/beachTent.jpeg"}
             />
             <SmallDestinationItem
               itinerary_name={
                 "[PREMIUM TRIP] Labuan Bajo: Liveboard in VINCA VOYAGES Phinisi"
               }
-              partner_name={"Pandooin"}
+              partner_name={"pandooin"}
               itinerary_variant_pub_price={"7500000"}
-              image={
-                "https://ik.imagekit.io/pandooin/tr:pr-true/production/images/itinerary/canyoneering-curug-cikondang-2d1n/UrVTwoOUK3Cw2zlQdhixck1TiZP5vT7NUEj2DKNi.jpg"
-              }
+              image={"/images/hotelTent.jpeg"}
             />
           </Div>
 

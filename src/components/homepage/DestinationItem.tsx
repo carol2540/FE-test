@@ -3,10 +3,10 @@ import Div from "../Div";
 
 import Button from "../Button";
 import { cn, formatRupiah } from "@/lib/utils";
-import ImageSlider from "./ImageSlider";
+import SlidingImage from "./SlidingImage";
 import { ItineraryGallery } from "@/lib/type";
 
-export interface DestinationItemProps {
+export interface Destination_ItemProps {
   direction?: "ltr" | "rtl";
   itinerary_name: string;
   description?: string;
@@ -16,14 +16,14 @@ export interface DestinationItemProps {
   index?: number;
 }
 
-const DestinationItem = ({
+const Destination_Item = ({
   direction = "ltr",
   itinerary_name,
   description,
   partner_name,
   image,
   itinerary_variant_pub_price,
-}: DestinationItemProps) => {
+}: Destination_ItemProps) => {
   return (
     <Div full column className="gap-3 md:flex-row md:items-center lg:gap-8">
       <Div
@@ -33,7 +33,7 @@ const DestinationItem = ({
           direction == "ltr" ? "md:order-1" : "md:order-2"
         )}
       >
-        <ImageSlider data={image} />
+        <SlidingImage data={image} />
       </Div>
 
       <Div
@@ -80,4 +80,4 @@ const DestinationItem = ({
   );
 };
 
-export default DestinationItem;
+export default Destination_Item;

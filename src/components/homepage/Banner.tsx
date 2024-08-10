@@ -43,7 +43,7 @@ const Banner = () => {
               target="_blank"
               className="font-bold lg:text-20"
             >
-              Pandooin.com
+              pandooin.com
             </a>
             <Icon
               icon="iconamoon:arrow-top-right-1-light"
