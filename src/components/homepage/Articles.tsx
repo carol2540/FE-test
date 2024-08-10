@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "../Wrapper";
 import Div from "../Div";
-import Article_Item from "./ArticleItem";
+import Article_Item from "./Article_Item";
 import { getArticle } from "@/lib/HTTPConnect";
 
 const listArticle = [

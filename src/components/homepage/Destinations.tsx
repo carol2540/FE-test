@@ -2,7 +2,7 @@ import React from "react";
 import Wrapper from "../Wrapper";
 import Div from "../Div";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import DestinationItem from "./DestinationItem";
+import Destination_Item from "./Destination_Item";
 import SmallDestinationItem from "./SmallDestinationItem";
 import { getDatas } from "@/lib/HTTPConnect";
 
@@ -37,7 +37,7 @@ const Destinations = async () => {
 
         <Div column itemsCenter full className="gap-8 md:gap-16">
           {data.data?.map((item: any, index: number) => (
-            <DestinationItem
+            <Destination_Item
               key={item.id || index}
               direction={index % 2 ? "rtl" : "ltr"}
               itinerary_name={item.itinerary_name}
